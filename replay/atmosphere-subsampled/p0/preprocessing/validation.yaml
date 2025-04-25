@@ -11,7 +11,7 @@ source:
   uri: gs://noaa-ufs-gefsv13replay/ufs-hr1/0.25-degree-subsampled/03h-freq/zarr/fv3.zarr
   time:
     start: 1995-01-01T00
-    end: 1995-12-31T21
+    end: 1995-03-31T21
     freq: 3h
 
   variables:
