@@ -33,6 +33,7 @@ dependencies:
     - pytest
     - pytest-dependency
     - coverage
+# ufs2arco
     - pip
     - pip:
       - ufs2arco>=0.7.0
