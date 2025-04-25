@@ -1,6 +1,6 @@
 # Atmosphere Subsampled
 
-The configurations here are an atmosphere-only configuration at a horizontal
+The configurations here are atmosphere-only at a horizontal
 resolution resulting from subsampling the original 1/4 degree output by
 selecting every 4th point in longitude and latitude.
 That is, it's approximately 1 degree.

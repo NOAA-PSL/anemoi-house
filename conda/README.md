@@ -11,8 +11,6 @@ by the two yaml files in this repo:
 
 ## 1. Create the two environments
 
-using the commands
-
 ```
 conda env create -f ufs2arco.yaml
 conda env create -f anemoi.yaml
