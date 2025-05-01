@@ -1,4 +1,4 @@
-name: anemoi2
+name: anemoi
 channels:
   - conda-forge
 dependencies:
