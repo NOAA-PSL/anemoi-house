@@ -49,3 +49,14 @@ installed, then simply install it from conda-forge
 conda activate ufs2arco
 conda install -c conda-forge mpi4py
 ```
+
+## 3. Install `flash-attn` into the anemoi environment
+
+[Flash attention](https://github.com/Dao-AILab/flash-attention)
+is used to speed up attention in the transformer architecture.
+To install, run
+
+```
+conda activate anemoi
+pip install flash-attn --no-build-isolation
+```
