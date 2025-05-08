@@ -69,7 +69,7 @@ dependencies:
     # anemoi-utils
     - aniso8601
     - nvsmi
-    - torch
+    - torch<2.7
     - torchvision
     - torchaudio
     - torch_geometric

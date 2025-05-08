@@ -10,7 +10,49 @@ by the two yaml files in this repo:
   [anemoi](https://anemoi.readthedocs.io/en/latest/) family of packages
 
 
-## 1. Create an environment for Anemoi
+## General Build Tips
+
+A lot of these pertain to flash attention, because it's a tricky one.
+* If you're on an HPC system, make sure you have a recent version of gcc
+  installed, or loaded via lmod (the usual module system).
+  On Perlmutter, version 12.2 is working just fine.
+* Make sure the `flash-attn` and `pytorch` versions work well together.
+  For example, look at `flash-attn` version 2.7.4.post1
+  [here](https://github.com/Dao-AILab/flash-attention/releases/tag/v2.7.4.post1).
+  Notice that there is no wheel for torch version 2.7, but there is for version
+  2.6. To see this, ctrl+f search for torch2.6 - lots of options there, but none
+  for torch2.7.
+
+
+
+## Perlmutter Instructions
+
+These instructions will get you setup on Perlmutter, and should be helpful for
+other machines too.
+
+### 0. Clear unnecessary disk space
+
+Before getting started, I recommend clearing unnecessary space that is taken up
+by conda and pip.
+This prevents you from running out of disk space during the installation, which
+might create an inconsistent environment.
+
+
+For conda:
+```
+module load conda
+conda clean --all
+```
+
+For pip:
+```
+module load conda
+conda activate base
+pip cache purge
+```
+
+
+### 1. Create an environment for Anemoi
 
 First, we need to get the right modules loaded.
 Be sure to start this off with `module restore` and not
@@ -18,10 +60,11 @@ Be sure to start this off with `module restore` and not
 be loaded.
 
 ```
+module purge
+source /opt/cray/pe/cpe/24.07/restore_lmod_system_defaults.sh
 module restore
 module load conda
-module load PrgEnv-nvidia cray-mpich cudatoolkit craype-accel-nvidia80
-module load cudnn/8.9.3 nccl/2.21.5
+module load gcc cudnn/8.9.3 nccl/2.21.5
 ```
 
 Now we create the conda environment
@@ -40,16 +83,16 @@ conda activate anemoi
 pip install flash-attn --no-build-isolation
 ```
 
-## 2. Create and environment for ufs2arco
+## 2. Create an environment for ufs2arco
 
-First load modules, and note that these are different from the anemoi
-environment.
-It's not clear to me if all of these are necessary, but they are sufficient to
-get the job done.
+The modules used in the anemoi environment should work here, but either way the
+following commands will be sufficient.
 
 ```
+module purge
+source /opt/cray/pe/cpe/24.07/restore_lmod_system_defaults.sh
 module restore
-module load conda PrgEnv-gnu cray-mpich
+module load conda
 ```
 
 Now we can create the environment
