@@ -50,7 +50,7 @@ dependencies:
   - tqdm
   - boto3
   - requests
-  - earthkit-data[mars]
+  - earthkit-data[mars]<0.4.0
   - earthkit-geo
   - eccodes
   - entrypoints
