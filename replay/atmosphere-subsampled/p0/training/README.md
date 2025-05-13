@@ -27,8 +27,8 @@ look like:
 hardware:
   num_gpus_per_model: 1
   paths:
-    output: /pscratch/sd/t/timothys/anemoi-house/replay/atmosphere-subsampled/p0/training-output
-    data: /pscratch/sd/t/timothys/anemoi-house/replay/atmosphere-subsampled/p0
+    output: ${SCRATCH}/anemoi-house/replay/atmosphere-subsampled/p0/training-output
+    data: ${SCRATCH}/anemoi-house/replay/atmosphere-subsampled/p0
     # etc
 ```
 

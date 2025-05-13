@@ -3,18 +3,19 @@
 The yaml files here create separate datasets for training, validation, and
 testing, respectively.
 
-Note that the "directories" section of each yaml file needs to be prepended with
-a user-specific directory, for example on Perlmutter, we could use something
-like:
+Note that the "directories" section of each yaml file is the main place that
+needs to be modified per-user. Right now, the directories:
 
 ```yaml
 directories:
-  zarr: /pscratch/sd/t/timothys/anemoi-house/replay/atmosphere-subsampled/p0/training.zarr
-  cache: /pscratch/sd/t/timothys/anemoi-house/replay/atmosphere-subsampled/p0/ufs2arco-cache/
-  logs: /pscratch/sd/t/timothys/anemoi-house/replay/atmosphere-subsampled/p0/ufs2arco-logs/training
+  zarr: ${SRATCH}/anemoi-house/replay/atmosphere-subsampled/p0/training.zarr
+  cache: ${SCRATCH}/anemoi-house/replay/atmosphere-subsampled/p0/ufs2arco-cache/
+  logs: ${SCRATCH}/anemoi-house/replay/atmosphere-subsampled/p0/ufs2arco-logs/training
 ```
 
-but then this will have to be changed to each user's specific directories.
+will look for the `${SCRATCH}` environment variable and store data and logs
+there.
+However, if a different directory is desired, these are the options to change.
 
 ## Job submission
 

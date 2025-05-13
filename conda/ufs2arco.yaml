@@ -36,4 +36,4 @@ dependencies:
 # ufs2arco
     - pip
     - pip:
-      - ufs2arco>=0.7.0
+      - ufs2arco>=0.9.0

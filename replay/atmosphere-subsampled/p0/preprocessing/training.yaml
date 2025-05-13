@@ -2,9 +2,9 @@ mover:
   name: mpidatamover
 
 directories:
-  zarr: /pscratch/sd/t/timothys/anemoi-house/replay/atmosphere-subsampled/p0/training.zarr
-  cache: /pscratch/sd/t/timothys/anemoi-house/replay/atmosphere-subsampled/p0/ufs2arco-cache/training
-  logs: /pscratch/sd/t/timothys/anemoi-house/replay/atmosphere-subsampled/p0/ufs2arco-logs/training
+  zarr: ${SCRATCH}/anemoi-house/replay/atmosphere-subsampled/p0/training.zarr
+  cache: ${SCRATCH}/anemoi-house/replay/atmosphere-subsampled/p0/ufs2arco-cache/training
+  logs: ${SCRATCH}/anemoi-house/replay/atmosphere-subsampled/p0/ufs2arco-logs/training
 
 source:
   name: gcs_replay_atmosphere
