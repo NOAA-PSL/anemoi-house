@@ -1,7 +1,7 @@
 # Note: need to swap out this path to the specific path where the trained model ended up
-checkpoint: "/pscratch/sd/t/timothys/anemoi-house/replay/atmosphere-subsampled/p0/training-outputcheckpoint/e541bb4b-f2b4-4a77-8c3c-4e0dcd259436/inference-last.ckpt"
+checkpoint: "/pscratch/sd/t/timothys/anemoi-house/replay/atmosphere-subsampled/p0/training-output/checkpoint/99bb6fa6-8871-4b14-94bd-a3a27193dda8/inference-last.ckpt"
 
-lead_time: 243 # hours
+lead_time: 240 # hours
 
 date: 1995-01-01T03
 
@@ -9,4 +9,4 @@ input:
   dataset: "/pscratch/sd/t/timothys/anemoi-house/replay/atmosphere-subsampled/p0/validation.zarr"
 
 output:
-  netcdf: "/pscratch/sd/t/timothys/anemoi-house/replay/atmosphere-subsampled/p0/training-outputcheckpoint/e541bb4b-f2b4-4a77-8c3c-4e0dcd259436/forecast.240hr.1995-01-01T03.nc"
+  netcdf: "forecast.nc"
