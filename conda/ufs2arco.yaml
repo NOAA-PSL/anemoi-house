@@ -27,6 +27,7 @@ dependencies:
     - nbsphinx
     - sphinx-book-theme
 # regrid
+    - esmf=*=nompi*
     - xesmf
 # developer
     - setuptools_scm>=8
