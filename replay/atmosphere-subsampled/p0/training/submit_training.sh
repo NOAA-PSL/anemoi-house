@@ -12,6 +12,8 @@
 #SBATCH --constraint=gpu&hbm80g
 #SBATCH -t 36:00:00
 
+module load conda
+
 conda activate anemoi
 
 srun --jobid $SLURM_JOB_ID ~/anemoi-house/slurm2ddp.sh anemoi-training train --config-name=config
