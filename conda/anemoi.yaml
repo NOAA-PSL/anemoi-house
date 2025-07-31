@@ -17,6 +17,7 @@ dependencies:
   - cftime
   - flox
   - cartopy
+  - ufs2arco
 # jupyter etc
   - jupyter
   - ipython
