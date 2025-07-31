@@ -3,7 +3,7 @@
 This is essentially a "Hello World" setup to make sure things are working
 properly.
 The general steps are:
-1. Create the data using the yamls in the [preprocessing/](./preprocessing/)
+1. Create the data using the yamls in the [data/](./data/)
    directory
 2. Train the model using the yamls in the [training/](./training)
    directory
