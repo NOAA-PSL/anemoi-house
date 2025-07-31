@@ -9,7 +9,7 @@
 #SBATCH --cpus-per-task=16
 #SBATCH --qos=regular
 #SBATCH --account=m4718
-#SBATCH --constraint=gpu&hbm80g
+#SBATCH --constraint=gpu
 #SBATCH -t 36:00:00
 
 module load conda

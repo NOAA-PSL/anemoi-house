@@ -13,6 +13,4 @@
 
 module load conda
 conda activate ufs2arco
-srun ufs2arco training.yaml --overwrite
-srun ufs2arco validation.yaml --overwrite
-srun ufs2arco testing.yaml --overwrite
+srun ufs2arco replay.yaml
