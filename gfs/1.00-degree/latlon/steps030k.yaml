@@ -97,15 +97,12 @@ diagnostics:
       entity: null
     mlflow:
       enabled: True
-      offline: False
+      offline: True
       authentication: False
       log_model: False
       tracking_uri: null
       experiment_name: 'gfs-one-degree'
       project_name: 'anemoi-house'
-      use_azure: True
-      aml_resource_group: "PSL-PMP-ML"
-      aml_workspace_name: "psl-ml-workspace"
       system: True
       terminal: True
       run_name: null # If set to null, the run name will be the a random UUID
