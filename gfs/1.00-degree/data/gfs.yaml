@@ -2,9 +2,9 @@ mover:
   name: mpidatamover
 
 directories:
-  zarr: ${SCRATCH}/anemoi-house/gfs/0.25-degree/data/gfs.zarr
-  cache: ${SCRATCH}/anemoi-house/gfs/0.25-degree/data/cache
-  logs: ${SCRATCH}/anemoi-house/gfs/0.25-degree/data/logs-finalize
+  zarr: ${SCRATCH}/anemoi-house/gfs/1.00-degree/data/gfs.zarr
+  cache: ${SCRATCH}/anemoi-house/gfs/1.00-degree/data/cache/gfs
+  logs: ${SCRATCH}/anemoi-house/gfs/1.00-degree/data/logs/gfs
 
 multisource:
 
@@ -81,10 +81,17 @@ multisource:
         sel:
           latitude: [89.9, -89.9]
 
+transforms:
+  horizontal_regrid:
+    target_grid_path: ${SCRATCH}/anemoi-house/gfs/1.00-degree/data/global_one_degree.nc
+    regridder_kwargs:
+      method: conservative
+      reuse_weights: True
+      filename: ${SCRATCH}/anemoi-house/gfs/1.00-degree/data/conservative_719x1440_180x360.nc
+
 target:
   name: anemoi
   sort_channels_by_levels: True
-  compute_temporal_residual_statistics: False
   statistics_period:
     start: 2015-02-01T06
     end: 2023-01-31T18

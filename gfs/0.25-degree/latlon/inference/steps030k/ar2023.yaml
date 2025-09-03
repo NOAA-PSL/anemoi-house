@@ -1,9 +1,0 @@
-checkpoint_path: ${SCRATCH}/anemoi-house/gfs/0.25-degree/latlon/steps030k/checkpoint/ac65ebd7-1409-431e-a55e-bd4348253660/inference-last.ckpt
-lead_time: 240
-input_dataset_kwargs:
-  dataset: /pscratch/sd/t/timothys/anemoi-house/gfs/0.25-degree/data/gfs.zarr
-output_path: ${SCRATCH}/anemoi-house/gfs/0.25-degree/latlon/steps030k/inference
-
-start_date: 2023-03-08T00
-end_date: 2023-03-09T12
-freq: 12h
