@@ -1,9 +1,0 @@
-checkpoint_path: ${SCRATCH}/anemoi-house/gfs/1.00-degree/latlon/epochs300/checkpoint/77dc11b8-d817-4e66-98c8-479cee4216af/inference-last.ckpt
-lead_time: 240
-input_dataset_kwargs:
-  dataset: /pscratch/sd/t/timothys/nested-eagle/v0/data/gfs.zarr
-output_path: ${SCRATCH}/anemoi-house/gfs/1.00-degree/latlon/epochs300/inference-validation
-
-start_date: 2023-02-01T06
-end_date: 2024-01-20T12
-freq: 54h
