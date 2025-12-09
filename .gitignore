@@ -1,6 +1,7 @@
 # Custom additions
 *.out
 *.err
+*.npz
 *.nc
 *.zarr
 **/training/outputs/*
