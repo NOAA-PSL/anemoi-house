@@ -1,0 +1,11 @@
+checkpoint: /pscratch/sd/t/timothys/anemoi-house/gfs/0.25-degree/latlon/steps030k-nc1024-2x8encoders/checkpoint/beff68d8359f4f12980a58fdc36dc45a/inference-last.ckpt
+lead_time: 240
+input:
+  dataset: /pscratch/sd/t/timothys/anemoi-house/gfs/0.25-degree/data/gfs.zarr
+output:
+  netcdf: /pscratch/sd/t/timothys/anemoi-house/gfs/0.25-degree/latlon/steps030k-nc1024-2x8encoders/inference/forecast.nc
+
+date: 2023-03-08T00
+
+runner: parallel
+world_size: 4

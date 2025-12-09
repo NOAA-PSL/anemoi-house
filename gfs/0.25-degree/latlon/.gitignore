@@ -1,2 +1,3 @@
 outputs/
 slurm/
+submit*.sh

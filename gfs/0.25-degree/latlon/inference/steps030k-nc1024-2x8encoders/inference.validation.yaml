@@ -1,0 +1,30 @@
+checkpoint_path: ${SCRATCH}/anemoi-house/gfs/0.25-degree/latlon/steps030k-nc1024-2x8encoders/checkpoint/beff68d8359f4f12980a58fdc36dc45a/inference-last.ckpt
+lead_time: 240
+input_dataset_kwargs:
+  dataset: /pscratch/sd/t/timothys/anemoi-house/gfs/0.25-degree/data/gfs.zarr
+output_path: ${SCRATCH}/anemoi-house/gfs/0.25-degree/latlon/steps030k-nc1024-2x8encoders/inference-validation
+
+#start_date: 2023-02-01T06
+#start_date: 2023-02-21T12
+#start_date: 2023-03-13T18
+#start_date: 2023-04-03T00
+#start_date: 2023-04-23T06
+#start_date: 2023-05-13T12
+#start_date: 2023-06-02T18
+#start_date: 2023-06-09T12
+#start_date: 2023-06-29T18
+#start_date: 2023-07-20T00
+#start_date: 2023-08-09T06
+#start_date: 2023-08-29T12
+#start_date: 2023-09-18T18
+#start_date: 2023-10-09T00
+#start_date: 2023-10-29T06
+#start_date: 2023-11-18T12
+#start_date: 2023-12-08T18
+#start_date: 2023-12-29T00
+start_date: 2024-01-18T06
+end_date: 2024-01-20T12
+freq: 54h
+
+#runner: parallel
+#world_size: 4
