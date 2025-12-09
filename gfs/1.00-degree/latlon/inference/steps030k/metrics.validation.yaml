@@ -1,5 +1,5 @@
 forecast_path: ${SCRATCH}/anemoi-house/gfs/1.00-degree/latlon/steps030k/inference-validation
-lead_time: 240h
+lead_time: 240
 
 verification_dataset_path: ${SCRATCH}/anemoi-house/gfs/1.00-degree/data/gfs.zarr
 output_path: ${SCRATCH}/anemoi-house/gfs/1.00-degree/latlon/steps030k/inference-validation

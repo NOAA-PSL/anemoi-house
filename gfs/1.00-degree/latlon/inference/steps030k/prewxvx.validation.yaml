@@ -1,0 +1,22 @@
+forecast_path: ${SCRATCH}/anemoi-house/gfs/1.00-degree/latlon/steps030k/inference-validation
+output_path: ${SCRATCH}/anemoi-house/gfs/1.00-degree/latlon/steps030k/inference-validation
+model_type: global
+lead_time: 240
+vars_of_interest:
+  - t2m
+  - gh
+  - sp
+  - t
+  - u
+  - u10
+  - v
+  - v10
+
+levels:
+  - 250
+  - 500
+  - 850
+
+start_date: 2023-02-01T06
+end_date: 2024-01-20T12
+freq: 54h

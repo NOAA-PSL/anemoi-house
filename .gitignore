@@ -1,4 +1,6 @@
 # Custom additions
+*.out
+*.err
 *.nc
 *.zarr
 **/training/outputs/*
