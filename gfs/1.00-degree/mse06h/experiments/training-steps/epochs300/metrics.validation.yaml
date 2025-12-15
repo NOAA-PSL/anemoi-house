@@ -1,10 +1,9 @@
 # location of forecasts, with filename convention {t0}.{lead_time}.nc, lead_time is defined below
-forecast_path: ${SCRATCH}/anemoi-house/gfs/1.00-degree/latlon/epochs300/inference-validation
+forecast_path: ${SCRATCH}/anemoi-house/gfs/1.00-degree/mse06h/experiments/training-steps/epochs300/inference-validation
 lead_time: 240
 
-# this will eventually have to change if we want to read multiple datasets, e.g. forecast and analysis
-verification_dataset_path: ${SCRATCH}/nested-eagle/v0/data/gfs.zarr
-output_path: ${SCRATCH}/anemoi-house/gfs/1.00-degree/latlon/epochs300/inference-validation
+verification_dataset_path: ${SCRATCH}/anemoi-house/gfs/1.00-degree/data/gfs.zarr
+output_path: ${SCRATCH}/anemoi-house/gfs/1.00-degree/mse06h/experiments/training-steps/epochs300/inference-validation
 
 model_type: global
 vars_of_interest:

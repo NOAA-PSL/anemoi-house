@@ -1,5 +1,5 @@
-forecast_path: ${SCRATCH}/anemoi-house/gfs/1.00-degree/latlon/steps030k/inference-validation
-output_path: ${SCRATCH}/anemoi-house/gfs/1.00-degree/latlon/steps030k/inference-validation
+forecast_path: ${SCRATCH}/anemoi-house/gfs/1.00-degree/mse06h/experiments/window-size/win2160/inference-validation
+output_path: ${SCRATCH}/anemoi-house/gfs/1.00-degree/mse06h/experiments/window-size/win2160/inference-validation
 lead_time: 240
 start_date: 2023-03-09T06
 end_date: 2023-03-19T06

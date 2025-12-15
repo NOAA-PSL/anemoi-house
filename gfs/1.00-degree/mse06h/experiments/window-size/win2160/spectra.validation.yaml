@@ -1,8 +1,8 @@
-forecast_path: ${SCRATCH}/anemoi-house/gfs/1.00-degree/latlon/steps030k/inference-validation
+forecast_path: ${SCRATCH}/anemoi-house/gfs/1.00-degree/mse06h/experiments/window-size/win2160/inference-validation
 lead_time: 240
 
 verification_dataset_path: ${SCRATCH}/anemoi-house/gfs/1.00-degree/data/gfs.zarr
-output_path: ${SCRATCH}/anemoi-house/gfs/1.00-degree/latlon/steps030k/inference-validation
+output_path: ${SCRATCH}/anemoi-house/gfs/1.00-degree/mse06h/experiments/window-size/win2160/inference-validation
 
 use_mpi: True
 min_delta_lat: 0.001

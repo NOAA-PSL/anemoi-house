@@ -1,8 +1,8 @@
-forecast_path: ${SCRATCH}/anemoi-house/gfs/1.00-degree/latlon/tendency-steps030k/inference-validation
+forecast_path: ${SCRATCH}/anemoi-house/gfs/1.00-degree/mse06h/experiments/tendency-loss-scaling/stddev/inference-validation
 lead_time: 240
 
 verification_dataset_path: ${SCRATCH}/anemoi-house/gfs/1.00-degree/data/gfs.zarr
-output_path: ${SCRATCH}/anemoi-house/gfs/1.00-degree/latlon/tendency-steps030k/inference-validation
+output_path: ${SCRATCH}/anemoi-house/gfs/1.00-degree/mse06h/experiments/tendency-loss-scaling/stddev/inference-validation
 
 model_type: global
 vars_of_interest:
