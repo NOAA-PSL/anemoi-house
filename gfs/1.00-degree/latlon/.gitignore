@@ -1,4 +1,0 @@
-outputs/
-slurm/
-submit_*.sh
-mlruns/

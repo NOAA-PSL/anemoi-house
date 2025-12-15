@@ -4,7 +4,7 @@
 First, run inference on a GPU node
 
 ```
-eagle-tools inference steps030k/inference.validation.yaml
+eagle-tools inference inference.validation.yaml
 ```
 
 Then evaluate on a CPU node. Note that this is just an example,
@@ -12,11 +12,11 @@ and running all of these will take multiple hours.
 The spectra computation is especially time consuming.
 
 ```
-eagle-tools metrics steps030k/metrics.validation.yaml
-eagle-tools spatial steps030k/spatial.validation.yaml
-eagle-tools spectra steps030k/spectra.validation.yaml
-eagle-tools figures steps030k/visualize.yaml
-eagle-tools movies steps030k/visualize.yaml
+eagle-tools metrics metrics.validation.yaml
+eagle-tools spatial spatial.validation.yaml
+eagle-tools spectra spectra.validation.yaml
+eagle-tools figures visualize.yaml
+eagle-tools movies visualize.yaml
 ```
 
 Note that using the same `visualize.yaml` for figures and movies means that you'll
