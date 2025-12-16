@@ -172,7 +172,7 @@ system:
     latent_mesh: ${oc.decode:${oc.env:SCRATCH}}/anemoi-house/gfs/1.00-degree/mesh-gen/latentx2.global1degree.sorted.npz
 
   output:
-    root: ${oc.decode:${oc.env:SCRATCH}}/anemoi-house/gfs/1.00-degree/mse06h/experiments/knn-encoder/
+    root: ${oc.decode:${oc.env:SCRATCH}}/anemoi-house/gfs/1.00-degree/mse06h/experiments/knn-encoder/knn12/
 
 model:
   num_channels: 512
