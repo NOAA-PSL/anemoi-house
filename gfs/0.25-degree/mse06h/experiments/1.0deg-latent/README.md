@@ -2,7 +2,7 @@
 
 
 
-## 2 Encoders
+## 2x16 Encoders
 
 2 encoders, with same encoder structure as 1 degree model, and with the
 trainable parameters
@@ -43,7 +43,7 @@ trainable parameters
 ```
 
 
-## 1 Degree Latent Space
+## 1x16 encoders
 
 Note that this contains isolated nodes
 

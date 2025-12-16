@@ -97,16 +97,16 @@ diagnostics:
       entity: null
     mlflow:
       enabled: True
-      offline: False
+      offline: True
       authentication: False
       log_model: False
       tracking_uri: null
       experiment_name: 'gfs-quarter-degree'
       project_name: 'anemoi-house'
-      use_azure: True
+      use_azure: False
       system: True
       terminal: True
-      run_name: latlon-steps030k
+      run_name: latlon-steps030k-nc1024-2x8encoders
       on_resume_create_child: True
       expand_hyperparams: # Which keys in hyperparams to expand
         - config
@@ -121,21 +121,38 @@ diagnostics:
 
 graph:
   overwrite: False
+  data: "data"
+  hidden: "hidden"
   nodes:
     data:
       node_builder:
         _target_: anemoi.graphs.nodes.AnemoiDatasetNodes
         dataset: ${dataloader.dataset}
       attributes: ${graph.attributes.nodes}
+    middle:
+      node_builder:
+        _target_: anemoi.graphs.nodes.NPZFileNodes
+        npz_file: ${hardware.paths.graph}/${hardware.files.middle_npz_file}
+        lat_key: lat
+        lon_key: lon
     hidden:
       node_builder:
         _target_: anemoi.graphs.nodes.NPZFileNodes
-        npz_file: ${hardware.paths.graph}/${hardware.files.npz_file}
+        npz_file: ${hardware.paths.graph}/${hardware.files.hidden_npz_file}
         lat_key: lat
         lon_key: lon
   edges:
-  # Encoder configuration
+  # Encoder 1 configuration
   - source_name: ${graph.data}
+    target_name: middle
+    edge_builders:
+    - _target_: anemoi.graphs.edges.KNNEdges
+      num_nearest_neighbours: 4
+      source_mask_attr_name: null
+      target_mask_attr_name: null
+    attributes: ${graph.attributes.edges}
+  # Encoder 2 configuration
+  - source_name: middle
     target_name: ${graph.hidden}
     edge_builders:
     - _target_: anemoi.graphs.edges.KNNEdges
@@ -170,17 +187,22 @@ hardware:
   num_gpus_per_model: 4
   paths:
     data: ${oc.decode:${oc.env:SCRATCH}}/anemoi-house/gfs/0.25-degree/data
-    graph: ${oc.decode:${oc.env:SCRATCH}}/anemoi-house/gfs/0.25-degree/latlon/
-    output: ${oc.decode:${oc.env:SCRATCH}}/anemoi-house/gfs/0.25-degree/latlon/steps030k/
+    graph: ${oc.decode:${oc.env:SCRATCH}}/anemoi-house/gfs/0.25-degree/mesh-gen/1.0deg-latent/
+    output: ${oc.decode:${oc.env:SCRATCH}}/anemoi-house/gfs/0.25-degree/mse06h/experiments/1.0deg-latent/2x08encoders-nc1024/
   files:
-    graph: graph.0.5degree.pt
-    npz_file: latentx2.fromdata.global_quarter_degree.sorted.npz
+    graph: graph.2encoders.pt
+    middle_npz_file: latent.stage1.global_quarter_degree.sorted.npz
+    hidden_npz_file: latent.stage2.global_quarter_degree.sorted.npz
     global_dataset: gfs.zarr
 
 model:
-  num_channels: 512
+  model:
+    _target_: anemoi.models.models.AnemoiModelMultiEncProcDec
+  num_channels: 1024
   processor:
     window_size: 4320
+  encoder:
+    num_heads: 8
   bounding:
     - _target_: anemoi.models.layers.bounding.ReluBounding #[0, infinity)
       variables:

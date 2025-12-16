@@ -169,8 +169,8 @@ hardware:
   num_gpus_per_model: 4
   paths:
     data: ${oc.decode:${oc.env:SCRATCH}}/anemoi-house/gfs/0.25-degree/data
-    graph: ${oc.decode:${oc.env:SCRATCH}}/anemoi-house/gfs/0.25-degree/latlon/
-    output: ${oc.decode:${oc.env:SCRATCH}}/anemoi-house/gfs/0.25-degree/latlon/steps030k-1deglatent/
+    graph: ${oc.decode:${oc.env:SCRATCH}}/anemoi-house/gfs/0.25-degree/mesh-gen/1.0deg-latent/
+    output: ${oc.decode:${oc.env:SCRATCH}}/anemoi-house/gfs/0.25-degree/mse06h/experiments/1.0deg-latent/1x16encoders/
   files:
     graph: graph.1.0degree.pt
     npz_file: latentx4.fromdata.global_quarter_degree.sorted.npz

@@ -106,7 +106,7 @@ diagnostics:
       use_azure: False
       system: True
       terminal: True
-      run_name: latlon-steps030k-nc1024-2x8encoders
+      run_name: latlon-steps030k-2x8encoders
       on_resume_create_child: True
       expand_hyperparams: # Which keys in hyperparams to expand
         - config
@@ -187,8 +187,8 @@ hardware:
   num_gpus_per_model: 4
   paths:
     data: ${oc.decode:${oc.env:SCRATCH}}/anemoi-house/gfs/0.25-degree/data
-    graph: ${oc.decode:${oc.env:SCRATCH}}/anemoi-house/gfs/0.25-degree/latlon/steps030k-2encoders/
-    output: ${oc.decode:${oc.env:SCRATCH}}/anemoi-house/gfs/0.25-degree/latlon/steps030k-nc1024-2x8encoders/
+    graph: ${oc.decode:${oc.env:SCRATCH}}/anemoi-house/gfs/0.25-degree/mesh-gen/1.0deg-latent/
+    output: ${oc.decode:${oc.env:SCRATCH}}/anemoi-house/gfs/0.25-degree/mse06h/experiments/1.0deg-latent/2x08encoders/
   files:
     graph: graph.2encoders.pt
     middle_npz_file: latent.stage1.global_quarter_degree.sorted.npz
@@ -198,7 +198,7 @@ hardware:
 model:
   model:
     _target_: anemoi.models.models.AnemoiModelMultiEncProcDec
-  num_channels: 1024
+  num_channels: 512
   processor:
     window_size: 4320
   encoder:
@@ -222,6 +222,7 @@ model:
       - q_1000
 
 training:
+  run_id: 4c766e7696bb4be6b2257209f81c150a
   max_steps: 30_000
   # LR = local_rate * num_gpus_per_node * num_nodes / gpus_per_model
   #    = local_rate * total_gpus / gpus_per_model
