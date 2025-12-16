@@ -1,10 +1,10 @@
-forecast_path: ${SCRATCH}/anemoi-house/gfs/0.25-degree/latlon/steps030k-1deglatent/inference-validation
+forecast_path: ${SCRATCH}/anemoi-house/gfs/0.25-degree/mse06h/experiments/1.0deg-latent/1x16encoders/inference-validation
 lead_time: 240
 use_mpi: True
 
 verification_dataset_path: ${SCRATCH}/anemoi-house/gfs/0.25-degree/data/gfs.zarr
-output_path: ${SCRATCH}/anemoi-house/gfs/0.25-degree/latlon/steps030k-1deglatent/inference-validation
-log_path: ${SCRATCH}/anemoi-house/gfs/0.25-degree/latlon/steps030k-1deglatent/inference-validation/spectra
+output_path: ${SCRATCH}/anemoi-house/gfs/0.25-degree/mse06h/experiments/1.0deg-latent/1x16encoders/inference-validation
+log_path: ${SCRATCH}/anemoi-house/gfs/0.25-degree/mse06h/experiments/1.0deg-latent/1x16encoders/inference-validation/spectra
 
 model_type: global
 vars_of_interest:

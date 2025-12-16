@@ -1,11 +1,11 @@
 # location of forecasts, with filename convention {t0}.{lead_time}.nc, lead_time is defined below
-forecast_path: ${SCRATCH}/anemoi-house/gfs/0.25-degree/latlon/steps030k-nc1024-2x8encoders/inference-validation
+forecast_path: ${SCRATCH}/anemoi-house/gfs/0.25-degree/mse06h/experiments/1.0deg-latent/2x08encoders-nc1024/inference-validation
 lead_time: 240
 
 # this will eventually have to change if we want to read multiple datasets, e.g. forecast and analysis
 verification_dataset_path: ${SCRATCH}/anemoi-house/gfs/0.25-degree/data/gfs.zarr
-output_path: ${SCRATCH}/anemoi-house/gfs/0.25-degree/latlon/steps030k-nc1024-2x8encoders/inference-validation
-log_path: ${SCRATCH}/anemoi-house/gfs/0.25-degree/latlon/steps030k-nc1024-2x8encoders/inference-validation/logs/metrics
+output_path: ${SCRATCH}/anemoi-house/gfs/0.25-degree/mse06h/experiments/1.0deg-latent/2x08encoders-nc1024/inference-validation
+log_path: ${SCRATCH}/anemoi-house/gfs/0.25-degree/mse06h/experiments/1.0deg-latent/2x08encoders-nc1024/inference-validation/logs/metrics
 use_mpi: True
 
 model_type: global

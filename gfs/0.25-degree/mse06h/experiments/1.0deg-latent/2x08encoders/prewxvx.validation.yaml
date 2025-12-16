@@ -1,5 +1,5 @@
-forecast_path: ${SCRATCH}/anemoi-house/gfs/0.25-degree/latlon/steps030k-2x8encoders/inference-validation
-output_path: ${SCRATCH}/anemoi-house/gfs/0.25-degree/latlon/steps030k-2x8encoders/inference-validation
+forecast_path: ${SCRATCH}/anemoi-house/gfs/0.25-degree/mse06h/experiments/1.0deg-latent/2x08encoders/inference-validation
+output_path: ${SCRATCH}/anemoi-house/gfs/0.25-degree/mse06h/experiments/1.0deg-latent/2x08encoders/inference-validation
 model_type: global
 lead_time: 240
 vars_of_interest:

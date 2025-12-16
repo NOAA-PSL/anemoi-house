@@ -1,8 +1,8 @@
-checkpoint_path: ${SCRATCH}/anemoi-house/gfs/0.25-degree/latlon/steps030k-1deglatent/checkpoint/ff19d65f3a8443a0978a9775e73a34aa/inference-last.ckpt
+checkpoint_path: ${SCRATCH}/anemoi-house/gfs/0.25-degree/mse06h/experiments/1.0deg-latent/1x16encoders/checkpoint/ff19d65f3a8443a0978a9775e73a34aa/inference-last.ckpt
 lead_time: 240
 input_dataset_kwargs:
   dataset: /pscratch/sd/t/timothys/anemoi-house/gfs/0.25-degree/data/gfs.zarr
-output_path: ${SCRATCH}/anemoi-house/gfs/0.25-degree/latlon/steps030k-1deglatent/inference-validation
+output_path: ${SCRATCH}/anemoi-house/gfs/0.25-degree/mse06h/experiments/1.0deg-latent/1x16encoders/inference-validation
 
 #start_date: 2023-02-01T06
 #start_date: 2023-07-08T18
